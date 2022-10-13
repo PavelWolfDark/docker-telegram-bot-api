@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  telegram-bot-api:
+    build:
+      context: .
+      args:
+        - BASE=ubuntu
+        - UBUNTU_VERSION=22.04
+#        - BASE=alpine
+#        - ALPINE_VERSION=3.16
+        - TELEGRAM_BOT_API_VERSION=6.2
+        - UID=1000
+        - GID=1000
+      target: deploy
+    container_name: telegram-bot-api
+    ports:
+      - '8081:8081'
+    volumes:
+      - telegram-bot-api/data:/var/lib/telegram-bot-api
+      - telegram-bot-api/temp:/var/tmp/telegram-bot-api
+      - telegram-bot-api/logs:/var/log/telegram-bot-api
