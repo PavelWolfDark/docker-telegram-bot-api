@@ -2,6 +2,7 @@
 
 ## Supported versions
 
+- 6.4
 - 6.3
 - 6.2
 

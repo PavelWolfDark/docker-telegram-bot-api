@@ -7,8 +7,8 @@ services:
         - BASE=ubuntu
         - UBUNTU_VERSION=22.04
 #        - BASE=alpine
-#        - ALPINE_VERSION=3.16
-        - TELEGRAM_BOT_API_VERSION=6.3
+#        - ALPINE_VERSION=3.17
+        - TELEGRAM_BOT_API_VERSION=6.4
         - UID=1000
         - GID=1000
       target: deploy
